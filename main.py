@@ -18,6 +18,7 @@ def generate_response(prompt):
 
     data = {
         "model": "mistral",
+	#"model": "TinyLlama",
         "stream": True,  # Enable streaming to get responses line by line
         "prompt": prompt,
     }
