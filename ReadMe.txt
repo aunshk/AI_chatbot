@@ -1,7 +1,7 @@
-------- Build a Fully Local AI Chatbot with Ollama ----------
+
 
 # AI_chatbot
-Build a Fully Local AI Chatbot with Ollama
+# Build a Fully Local AI Chatbot with Ollama
 
 --> My setup 	: 
 
@@ -39,11 +39,11 @@ ollama pull mistral # requires higher system configuration
 ollama pull TinyLlama # lightweight model
 
 ## (optional) run ml model to test in backend 
-ollama pull mistral 
-ollama pull TinyLlama
+ollama run mistral 
+ollama run TinyLlama
 
 ##
-# delete model:
+# (optional) delete model:
 ollama rm TinyLlama
 ollama rm mistral
 
@@ -54,17 +54,18 @@ ollama rm mistral
 
 sudo yum install python3.12-devel
 
-#install requests (it is a popular Python library that Sends an HTTP request to the specified URL and handles the response)
+# install requests (it is a popular Python library that Sends an HTTP request to the specified URL and handles the response)
 pip3.12 install requests
 
+# install orjson (It is designed to provide high-performance JSON parsing and serialization (encoding and decoding))
 pip3.12 install orjson
 
 ## Note: if orjson failed to install then try upgrdaing the pip and try again	
 	pip3.12 install --upgrade pip
 	pip3.12 install orjson
 
+# install gradio (an open-source Python library designed to create user interfaces (UIs) for machine learning models and data science workflows.)
 pip3.12 install gradio
-
 python3.12 -c "import gradio; print(gradio.__version__)"	
 
 ##########################################################
