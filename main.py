@@ -19,6 +19,7 @@ def generate_response(prompt):
     data = {
         "model": "mistral",
 	#"model": "TinyLlama",
+	#"model": "deepseek-r1:1.5b",
         "stream": True,  # Enable streaming to get responses line by line
         "prompt": prompt,
     }
@@ -40,7 +41,7 @@ def generate_response(prompt):
                     actual_response = data.get("response", "")
 
                     # Append the response to the current response being built
-					current_response += actual_response
+		    current_response += actual_response
                     # Yield the current response progressively
                     yield current_response
 
